@@ -2,6 +2,7 @@ package ejercicios;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Arrays;
 
 public class Ejercicio2 {
 	
@@ -19,11 +20,24 @@ public class Ejercicio2 {
 		}
 		return contador;
 	}
-
+	
+	public static int[] bubbleSort(int[] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr.length-1-i; j++) {
+				if (arr[j] > arr[j+1]) {
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		return arr;
+	}
 	
 	public static void main(String[] args) {
 		int[] datos = {2, 2, 3, 7, 8, 4, 5, 3, 8, 0, 2, 4, 6, 3};
 		System.out.println("Hay " + numRepet(datos) + " repeticiones");
+		System.out.println("El array ordenado es" + Arrays.toString(bubbleSort(datos)));
 	}
 	
 }
