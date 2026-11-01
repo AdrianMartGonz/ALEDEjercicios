@@ -6,7 +6,7 @@ public class Hebra1 extends Thread {
 	
 	@Override
 	public void run() {
-		System.out.println("Hoy es" + LocalDate.now());
+		int valor = Integer.MIN_VALUE;
+		System.out.println("Hoy es" + LocalDate.now() + ". El valor es " + valor);
 	}
-	
 }
